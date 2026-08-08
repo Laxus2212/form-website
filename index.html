@@ -3,64 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Login Demo</title>
+    <title>SocialSpace - Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="page">
+    <div class="top-logo">
+        S
+    </div>
 
-        <section class="intro">
-            <h1>facebook</h1>
-            <p>
-                Terhubung dengan teman dan berbagai hal
-                yang penting bagi kamu.
-            </p>
+    <main class="main">
+
+        <section class="left-side">
+
+            <div class="illustration">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+
+                <div class="photo-card card-1">
+                    <span>☀️</span>
+                    <div class="fake-photo photo-one"></div>
+                </div>
+
+                <div class="photo-card card-2">
+                    <span>❤️</span>
+                    <div class="fake-photo photo-two"></div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="avatar">😊</div>
+                    <div class="profile-line"></div>
+                    <div class="profile-line short"></div>
+                </div>
+
+            </div>
+
+            <h1>
+                Jelajahi hal-hal<br>
+                yang <span>Anda sukai.</span>
+            </h1>
+
         </section>
 
-        <section class="login-card">
 
-            <form id="loginForm">
+        <section class="right-side">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Email atau nomor telepon"
-                    required
-                >
+            <div class="login-area">
 
-                <input
-                    type="password"
-                    id="demoPassword"
-                    placeholder="Password demo"
-                    required
-                >
+                <h2>Masuk ke SocialSpace</h2>
 
-                <button type="submit" class="login-button">
-                    Masuk
-                </button>
+                <form id="loginForm">
 
-                <a href="#" class="forgot">
-                    Lupa password?
-                </a>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email atau nomor ponsel"
+                        required
+                    >
 
-                <div class="divider"></div>
+                    <input
+                        type="password"
+                        id="demoPassword"
+                        placeholder="Kata sandi demo"
+                        required
+                    >
 
-                <button type="button" class="create-button">
-                    Buat akun baru
-                </button>
+                    <button type="submit" class="login-btn">
+                        Login
+                    </button>
 
-                <p class="demo-notice">
-                    Demo tampilan — password tidak disimpan
-                    atau dikirim ke server.
-                </p>
+                    <a href="#" class="forgot">
+                        Lupa kata sandi?
+                    </a>
 
-            </form>
+                    <div class="line"></div>
+
+                    <button type="button" class="create-btn">
+                        Buat akun baru
+                    </button>
+
+                    <p class="demo-text">
+                        Ini hanya halaman demo. Data password
+                        tidak disimpan atau dikirim.
+                    </p>
+
+                </form>
+
+            </div>
 
         </section>
 
     </main>
+
+
+    <footer>
+
+        <div class="languages">
+            Bahasa Indonesia &nbsp;&nbsp;
+            English (US) &nbsp;&nbsp;
+            Français (France) &nbsp;&nbsp;
+            Tiếng Việt &nbsp;&nbsp;
+            中文 &nbsp;&nbsp;
+            Español
+        </div>
+
+        <div class="links">
+            Tentang &nbsp; Privasi &nbsp; Ketentuan &nbsp;
+            Bantuan &nbsp; Cookie &nbsp; Pengaturan
+        </div>
+
+        <p>SocialSpace © 2026</p>
+
+    </footer>
 
     <script src="script.js"></script>
 
