@@ -330,3 +330,21 @@ footer p {
         width: 100%;
     }
 }
+@media (max-width: 500px) {
+    ...
+    ...
+}  /* tutup media */
+
+
+/* GAMBAR RANDOM */
+.illustration {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.illustration > .circle,
+.illustration > .photo-card,
+.illustration > .profile-card {
+    display: none;
+}
