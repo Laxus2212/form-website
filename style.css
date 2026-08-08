@@ -52,7 +52,9 @@ body {
 .illustration {
     width: 520px;
     height: 520px;
-    position: relative;
+    position: absolute;
+    right: 120px;
+    top: 35px;
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
