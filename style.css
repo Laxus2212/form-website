@@ -2,95 +2,101 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     margin: 0;
     padding: 0;
+
     width: 100%;
     min-height: 100%;
-}
 
-body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: #ffffff;
     color: #111111;
 }
 
 
-/* =========================
-   TOP LOGO
-========================= */
+/* =====================================
+   LOGO
+===================================== */
 
-.top-bar {
+.top-logo {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 22px 28px;
-    z-index: 10;
-}
 
-.demo-logo {
+    top: 22px;
+    left: 28px;
+
     width: 42px;
     height: 42px;
+
     border-radius: 50%;
+
     background: #1877f2;
-    color: white;
+
+    color: #ffffff;
+
+    font-size: 27px;
+    font-weight: 700;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 27px;
-    font-weight: 700;
+    z-index: 20;
 }
 
 
-/* =========================
-   MAIN LAYOUT
-========================= */
+/* =====================================
+   MAIN
+===================================== */
 
-.page {
-    min-height: calc(100vh - 110px);
-    display: flex;
+.main-container {
     width: 100%;
+
+    min-height: calc(100vh - 110px);
+
+    display: flex;
 }
 
 
-/* =========================
+/* =====================================
    LEFT SIDE
-========================= */
+===================================== */
 
 .left-side {
-    width: 75%;
-    min-height: 730px;
-
     position: relative;
 
+    width: 75%;
+
+    min-height: 730px;
+
     padding-left: 28px;
-    padding-top: 28px;
+    padding-bottom: 38px;
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
-    padding-bottom: 38px;
+    flex-direction: column;
+
+    justify-content: flex-end;
 }
 
 
-/* =========================
-   ILLUSTRATION
-========================= */
+/* =====================================
+   ILLUSTRATION AREA
+===================================== */
 
 .illustration {
+    position: absolute;
+
     width: 520px;
     height: 520px;
-
-    position: absolute;
 
     left: 50%;
     top: 50%;
 
-    transform: translate(-50%, -53%);
+    transform: translate(-50%, -54%);
 
     background: #f7f7f7;
 
@@ -98,16 +104,16 @@ body {
 }
 
 
-/* =========================
-   PHOTO CARDS
-========================= */
+/* =====================================
+   PHOTO CARD
+===================================== */
 
 .photo-card {
     position: absolute;
 
     overflow: hidden;
 
-    background: white;
+    background: #ffffff;
 
     border-radius: 18px;
 
@@ -115,17 +121,20 @@ body {
         0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+
 .photo-card img {
+    display: block;
+
     width: 100%;
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 }
 
 
-/* belakang */
+/* =====================================
+   BACK CARD
+===================================== */
 
 .card-1 {
     width: 230px;
@@ -136,11 +145,13 @@ body {
 
     transform: rotate(-5deg);
 
-    z-index: 1;
+    z-index: 2;
 }
 
 
-/* depan */
+/* =====================================
+   MAIN CARD
+===================================== */
 
 .card-2 {
     width: 270px;
@@ -151,13 +162,13 @@ body {
 
     transform: rotate(2deg);
 
-    z-index: 2;
+    z-index: 3;
 }
 
 
-/* =========================
+/* =====================================
    PROFILE CARD
-========================= */
+===================================== */
 
 .profile-card {
     position: absolute;
@@ -168,19 +179,24 @@ body {
     left: 145px;
     bottom: 20px;
 
-    background: white;
+    padding: 20px;
+
+    background: #ffffff;
 
     border-radius: 18px;
-
-    padding: 20px;
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.15);
 
-    z-index: 5;
+    z-index: 10;
 }
 
-.profile-avatar {
+
+/* =====================================
+   AVATAR
+===================================== */
+
+.avatar {
     width: 75px;
     height: 75px;
 
@@ -191,65 +207,81 @@ body {
     overflow: hidden;
 
     border: 3px solid #1877f2;
+
+    background: #ffffff;
 }
 
-.profile-avatar img {
+
+.avatar img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
+
+    object-fit: cover;
 }
 
+
+/* =====================================
+   PROFILE LINES
+===================================== */
+
 .profile-line {
-    height: 10px;
     width: 120px;
+    height: 10px;
+
+    margin-bottom: 8px;
 
     border-radius: 10px;
 
     background: #e4e6eb;
-
-    margin-bottom: 8px;
 }
+
 
 .profile-line-short {
     width: 75px;
 }
 
 
-/* =========================
-   DECORATION
-========================= */
+/* =====================================
+   DECORATIONS
+===================================== */
 
 .emoji {
     position: absolute;
 
-    z-index: 8;
+    z-index: 15;
+
+    user-select: none;
+}
+
+
+.emoji-smile {
+    left: 10px;
+    top: 65px;
 
     font-size: 48px;
 }
 
-.emoji-1 {
-    left: 10px;
-    top: 65px;
-}
 
-.emoji-2 {
+.emoji-heart {
     right: 5px;
     top: 330px;
+
     font-size: 58px;
 }
+
 
 .circle {
     position: absolute;
 
     border-radius: 50%;
 
-    z-index: 0;
+    z-index: 1;
 }
 
-.circle-1 {
+
+.circle-yellow {
     width: 55px;
     height: 55px;
 
@@ -259,7 +291,8 @@ body {
     background: #ffcc4d;
 }
 
-.circle-2 {
+
+.circle-pink {
     width: 65px;
     height: 65px;
 
@@ -270,13 +303,14 @@ body {
 }
 
 
-/* =========================
-   LEFT TITLE
-========================= */
+/* =====================================
+   TITLE
+===================================== */
 
 .left-side h1 {
     position: relative;
-    z-index: 10;
+
+    z-index: 20;
 
     margin: 0;
 
@@ -287,14 +321,15 @@ body {
     font-weight: 700;
 }
 
+
 .left-side h1 span {
     color: #1877f2;
 }
 
 
-/* =========================
+/* =====================================
    RIGHT SIDE
-========================= */
+===================================== */
 
 .right-side {
     width: 25%;
@@ -315,21 +350,23 @@ body {
 }
 
 
-/* =========================
+/* =====================================
    LOGIN BOX
-========================= */
+===================================== */
 
 .login-box {
     width: 100%;
-    max-width: 390px;
 
-    text-align: center;
+    max-width: 390px;
 }
+
 
 .login-box h2 {
     margin: 0 0 22px;
 
     font-size: 20px;
+
+    line-height: 1.2;
 
     font-weight: 700;
 
@@ -337,116 +374,149 @@ body {
 }
 
 
-/* =========================
-   FORM
-========================= */
-
-.login-box form {
-    width: 100%;
-}
+/* =====================================
+   INPUT
+===================================== */
 
 .login-box input {
+    display: block;
+
     width: 100%;
 
-    height: 52px;
+    height: 48px;
 
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 
     padding: 0 14px;
 
     border: 1px solid #ccd0d5;
 
-    border-radius: 8px;
+    border-radius: 7px;
 
-    background: white;
+    background: #ffffff;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 15px;
 
     outline: none;
 }
 
+
 .login-box input:disabled {
     opacity: 1;
-    color: #666;
-    background: white;
+
+    background: #ffffff;
 }
 
 
-/* =========================
-   LOGIN BUTTON
-========================= */
+/* =====================================
+   BLUE LOGIN BUTTON
+===================================== */
 
 .login-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
 
-    height: 52px;
+    height: 48px;
 
-    margin-top: 2px;
+    margin: 2px 0 0;
 
-    border: none;
+    padding: 0;
 
-    border-radius: 8px;
+    border: 0;
+
+    border-radius: 7px;
 
     background: #1877f2;
 
-    color: white;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 16px;
 
     font-weight: 700;
 
-    cursor: default;
+    line-height: 48px;
+
+    text-align: center;
 }
 
 
-/* =========================
-   FORGOT
-========================= */
+.login-button:disabled {
+    opacity: 1;
 
-.login-box a {
-    display: inline-block;
+    background: #1877f2;
 
-    margin-top: 16px;
+    color: #ffffff;
+}
+
+
+/* =====================================
+   FORGOT PASSWORD
+===================================== */
+
+.forgot-password {
+    display: block;
+
+    width: fit-content;
+
+    margin: 16px auto 0;
 
     color: #1877f2;
 
     font-size: 14px;
 
+    line-height: 20px;
+
     text-decoration: none;
 }
 
 
-/* =========================
+/* =====================================
    DIVIDER
-========================= */
+===================================== */
 
 .divider {
     width: 100%;
 
     height: 1px;
 
-    background: #ddd;
-
     margin: 20px 0;
+
+    background: #ddd;
 }
 
 
-/* =========================
-   CREATE BUTTON
-========================= */
+/* =====================================
+   CREATE ACCOUNT BUTTON
+===================================== */
 
 .create-button {
-    height: 48px;
+    display: block;
 
-    padding: 0 22px;
+    height: 44px;
 
-    border-radius: 8px;
+    margin: 0 auto;
+
+    padding: 0 18px;
 
     border: 1px solid #1877f2;
 
-    background: white;
+    border-radius: 7px;
+
+    background: #ffffff;
 
     color: #1877f2;
+
+    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 15px;
 
@@ -456,31 +526,37 @@ body {
 }
 
 
-/* =========================
-   DEMO NOTICE
-========================= */
+/* =====================================
+   DEMO TEXT
+===================================== */
 
-.demo-notice {
-    margin-top: 18px;
+.demo-text {
+    margin: 18px 0 0;
 
-    color: #555;
+    color: #555555;
 
     font-size: 12px;
 
     line-height: 1.4;
+
+    text-align: center;
 }
 
 
-/* =========================
+/* =====================================
    FOOTER
-========================= */
+===================================== */
 
 footer {
+    width: 100%;
+
     min-height: 110px;
+
+    padding: 22px 30px;
 
     border-top: 1px solid #ddd;
 
-    padding: 22px 30px;
+    background: #ffffff;
 
     color: #65676b;
 
@@ -489,29 +565,37 @@ footer {
     text-align: center;
 }
 
-.languages {
+
+.footer-languages {
     margin-bottom: 12px;
 }
 
-.languages span,
-.footer-links span {
-    margin-left: 14px;
+
+.footer-languages span {
+    margin: 0 7px;
 }
+
 
 .footer-links {
     margin-bottom: 12px;
 }
 
-.copyright {
-    color: #777;
+
+.footer-links span {
+    margin: 0 7px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+.copyright {
+    color: #777777;
+}
 
-@media (max-width: 1000px) {
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
 
     .left-side {
         width: 65%;
@@ -519,11 +603,14 @@ footer {
 
     .right-side {
         width: 35%;
+
         min-width: 340px;
     }
 
     .illustration {
-        transform: translate(-50%, -53%) scale(0.85);
+        transform:
+            translate(-50%, -54%)
+            scale(0.85);
     }
 
     .left-side h1 {
@@ -532,22 +619,33 @@ footer {
 }
 
 
+/* =====================================
+   MOBILE
+===================================== */
+
 @media (max-width: 750px) {
 
-    .page {
+    .main-container {
         flex-direction: column;
     }
 
     .left-side {
         width: 100%;
+
         min-height: 650px;
+
+        padding-bottom: 35px;
     }
 
     .right-side {
         width: 100%;
+
         min-width: 0;
 
+        min-height: auto;
+
         border-left: none;
+
         border-top: 1px solid #ddd;
 
         padding: 40px 25px;
@@ -557,7 +655,9 @@ footer {
         left: 50%;
         top: 45%;
 
-        transform: translate(-50%, -50%) scale(0.75);
+        transform:
+            translate(-50%, -50%)
+            scale(0.75);
     }
 
     .left-side h1 {
