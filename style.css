@@ -50,11 +50,9 @@ body {
 }
 
 .illustration {
-    width: 520px;
-    height: 520px;
-    position: absolute;
-    right: 120px;
-    top: 35px;
+    width: 580px;
+    height: 580px;
+    position: relative;
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
