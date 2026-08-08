@@ -118,6 +118,25 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+const gambar = [
+    "gambar1.jpeg",
+    "gambar2.jpeg",
+    "gambar3.jpeg"
+];
 
+const pilihan = Math.floor(Math.random() * gambar.length);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const illustration = document.querySelector(".illustration");
+
+    if (illustration) {
+        illustration.style.backgroundImage = `url("${gambar[pilihan]}")`;
+        illustration.style.backgroundSize = "contain";
+        illustration.style.backgroundRepeat = "no-repeat";
+        illustration.style.backgroundPosition = "center";
+    }
+});
+</script>
 </body>
 </html>
