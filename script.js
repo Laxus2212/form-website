@@ -1,52 +1,82 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbydJ14oHI5q7lnWPfqiTRnDcEwL7Qw2z57yhYQWGAEAEs8cT2T3_1M87hd00y36Ws7K/exec";
+document.addEventListener("DOMContentLoaded", function () {
 
-const form = document.getElementById("dataForm");
-const statusText = document.getElementById("status");
+    /*
+     * Semua gambar yang tersedia.
+     * Tambahkan nama file lain di sini kalau ada.
+     */
 
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+    const images = [
+        "gambar1.jpeg",
+        "gambar2.jpeg",
+        "gambar3.jpeg"
+    ];
 
-    const email = document.getElementById("email").value.trim();
-    const keterangan = document.getElementById("keterangan").value.trim();
 
-    if (!email || !keterangan) {
-        statusText.textContent = "Mohon isi semua data.";
-        return;
+    /*
+     * Acak array
+     */
+
+    function shuffle(array) {
+
+        const result = [...array];
+
+        for (
+            let i = result.length - 1;
+            i > 0;
+            i--
+        ) {
+
+            const random =
+                Math.floor(
+                    Math.random() * (i + 1)
+                );
+
+            [
+                result[i],
+                result[random]
+            ] = [
+                result[random],
+                result[i]
+            ];
+        }
+
+        return result;
     }
 
-    const button = form.querySelector("button");
 
-    button.disabled = true;
-    button.textContent = "Mengirim...";
-    statusText.textContent = "";
+    /*
+     * Ambil 3 gambar berbeda
+     */
 
-    try {
-        await fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: new URLSearchParams({
-                email: email,
-                keterangan: keterangan
-            })
-        });
+    const selectedImages = shuffle(images);
 
-        statusText.textContent = "Data berhasil dikirim. ✓";
 
-        form.reset();
+    /*
+     * Masukkan gambar ke card
+     */
 
-    } catch (error) {
+    const photo1 =
+        document.getElementById("photo1");
 
-        console.error(error);
+    const photo2 =
+        document.getElementById("photo2");
 
-        statusText.textContent =
-            "Gagal mengirim data. Silakan coba lagi.";
+    const photo3 =
+        document.getElementById("photo3");
 
-    } finally {
 
-        button.disabled = false;
-        button.textContent = "Kirim Data";
+    if (photo1) {
+        photo1.src = selectedImages[0];
     }
+
+
+    if (photo2) {
+        photo2.src = selectedImages[1];
+    }
+
+
+    if (photo3) {
+        photo3.src = selectedImages[2];
+    }
+
 });
