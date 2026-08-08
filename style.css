@@ -13,11 +13,11 @@ body {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
-    color: #111;
+    color: #1c1e21;
 }
 
 /* =========================
-   LOGO FACEBOOK
+   LOGO
    ========================= */
 
 .top-logo {
@@ -26,67 +26,48 @@ body {
     left: 30px;
     width: 42px;
     height: 42px;
-    z-index: 20;
+    z-index: 10;
 }
 
 .top-logo img {
+    display: block;
     width: 42px;
     height: 42px;
-    display: block;
     object-fit: contain;
 }
 
 /* =========================
-   LAYOUT UTAMA
+   MAIN
    ========================= */
 
 .main {
+    display: flex;
     width: 100%;
     min-height: calc(100vh - 105px);
-    display: flex;
 }
 
 /* =========================
-   BAGIAN KIRI
+   LEFT
    ========================= */
 
 .left-side {
+    position: relative;
     width: 75%;
     min-height: 730px;
-    position: relative;
+
+    padding-left: 28px;
+    padding-bottom: 35px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-left: 28px;
-    padding-bottom: 35px;
+
     border-right: 1px solid #ddd;
 }
 
 /* =========================
-   JUDUL
+   MAIN ILLUSTRATION
    ========================= */
-
-.left-side h1 {
-    margin: 0;
-    font-size: 44px;
-    line-height: 1.05;
-    font-weight: 700;
-    letter-spacing: -1.5px;
-}
-
-.left-side h1 span {
-    color: #1877f2;
-}
-
-/* =========================
-   GAMBAR UTAMA
-   ========================= */
-
-/*
-   Gambar gambar1.jpeg / gambar2.jpeg /
-   gambar3.jpeg dipasang lewat JavaScript
-   sebagai background.
-*/
 
 .illustration {
     position: absolute;
@@ -95,7 +76,7 @@ body {
     height: 580px;
 
     left: 50%;
-    top: 48px;
+    top: 45px;
 
     transform: translateX(-50%);
 
@@ -107,32 +88,35 @@ body {
     z-index: 2;
 }
 
-/*
-   Karena gambar1/2/3 sudah merupakan
-   gambar komposit lengkap, elemen dekorasi
-   HTML lama disembunyikan agar tidak
-   bertumpuk dengan gambar utama.
-*/
-
+/* gambar1/2/3 sudah merupakan gambar komposit */
 .illustration > .circle,
 .illustration > .photo-card,
 .illustration > .profile-card {
     display: none !important;
 }
 
-/* Elemen lama kalau ada di dalam illustration */
+/* =========================
+   TITLE
+   ========================= */
 
-.illustration .photo-card,
-.illustration .profile-card,
-.illustration .circle,
-.illustration .fake-photo,
-.illustration .photo-one,
-.illustration .photo-two {
-    display: none !important;
+.left-side h1 {
+    position: relative;
+    z-index: 5;
+
+    margin: 0;
+
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+}
+
+.left-side h1 span {
+    color: #1877f2;
 }
 
 /* =========================
-   BAGIAN KANAN
+   RIGHT LOGIN AREA
    ========================= */
 
 .right-side {
@@ -147,10 +131,7 @@ body {
     padding: 40px;
 }
 
-/* =========================
-   FORM LOGIN
-   ========================= */
-
+/* container login */
 .right-side form,
 .right-side .login-form,
 .right-side .login-box {
@@ -158,112 +139,130 @@ body {
     max-width: 375px;
 }
 
-/* Judul login */
+/* =========================
+   LOGIN TITLE
+   ========================= */
 
 .right-side h2,
 .right-side h3 {
-    margin: 0 0 20px 0;
+    margin: 0 0 18px;
+
     font-size: 20px;
+    line-height: 1.2;
     font-weight: 700;
 }
 
-/* Semua input */
+/* =========================
+   INPUT
+   ========================= */
 
 .right-side input[type="text"],
 .right-side input[type="email"],
 .right-side input[type="password"],
 .right-side input[type="tel"] {
+    display: block;
+
     width: 100%;
-    height: 48px;
+    height: 44px;
 
     padding: 0 14px;
+
+    margin: 0 0 10px;
 
     border: 1px solid #ccd0d5;
     border-radius: 8px;
 
     background: #fff;
 
+    color: #1c1e21;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 
     outline: none;
-
-    margin-bottom: 10px;
 }
 
 .right-side input:focus {
     border-color: #1877f2;
-    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.15);
+    box-shadow: 0 0 0 1px #1877f2;
 }
 
 /* =========================
-   TOMBOL LOGIN
+   PRIMARY BUTTON
    ========================= */
 
-.right-side button,
+.right-side button[type="submit"],
 .right-side input[type="submit"] {
-    width: 100%;
-    height: 48px;
+    display: block;
 
-    border: 0;
+    width: 100%;
+    height: 44px;
+
+    margin: 2px 0 0;
+
+    border: none;
     border-radius: 8px;
 
     background: #1877f2;
-    color: white;
+    color: #fff;
 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 700;
 
     cursor: pointer;
-
-    margin-top: 2px;
 }
 
-.right-side button:hover,
+.right-side button[type="submit"]:hover,
 .right-side input[type="submit"]:hover {
     background: #166fe5;
 }
 
 /* =========================
-   LINK
+   FORGOT PASSWORD
    ========================= */
 
-.right-side a {
+.right-side .forgot-password {
+    display: block;
+
+    margin: 15px 0 18px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.right-side .forgot-password a {
     color: #1877f2;
     text-decoration: none;
 }
 
-.right-side a:hover {
+.right-side .forgot-password a:hover {
     text-decoration: underline;
 }
 
-/* Lupa password */
-
-.right-side .forgot-password,
-.right-side .forgot,
-.right-side p {
-    font-size: 13px;
-}
-
 /* =========================
-   PEMBATAS
+   SEPARATOR
    ========================= */
 
 .right-side hr {
+    width: 100%;
+
+    margin: 0 0 20px;
+
     border: 0;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
+    border-top: 1px solid #dadde1;
 }
 
 /* =========================
-   TOMBOL BUAT AKUN
+   CREATE ACCOUNT
    ========================= */
 
 .right-side .create-account,
-.right-side .register,
-.right-side button.secondary {
+.right-side .register {
+    display: block;
+
     width: 100%;
-    height: 46px;
+    height: 44px;
 
     border: 1px solid #1877f2;
     border-radius: 8px;
@@ -278,9 +277,42 @@ body {
 }
 
 .right-side .create-account:hover,
-.right-side .register:hover,
-.right-side button.secondary:hover {
+.right-side .register:hover {
     background: #f5f9ff;
+}
+
+/* =========================
+   DEMO NOTICE
+   ========================= */
+
+.demo-notice {
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #65676b;
+
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/* =========================
+   META / BRANDING DEMO
+   ========================= */
+
+.meta-logo {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #65676b;
+    font-size: 13px;
+}
+
+.meta-logo span {
+    color: #1877f2;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 /* =========================
@@ -290,6 +322,8 @@ body {
 footer {
     width: 100%;
     min-height: 105px;
+
+    padding: 22px 20px;
 
     border-top: 1px solid #ddd;
 
@@ -302,27 +336,11 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 12px;
+
     color: #737373;
-}
 
-/* =========================
-   META
-   ========================= */
-
-.meta-logo {
-    margin-top: 20px;
+    font-size: 12px;
     text-align: center;
-
-    color: #1877f2;
-
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.meta-logo span {
-    font-size: 18px;
-    font-weight: 700;
 }
 
 /* =========================
@@ -343,7 +361,6 @@ footer p {
     .illustration {
         width: 500px;
         height: 500px;
-        top: 60px;
     }
 
     .left-side h1 {
@@ -371,12 +388,9 @@ footer p {
     }
 
     .illustration {
-        width: min(520px, 90vw);
-        height: min(520px, 90vw);
-        top: 50px;
-    }
-
-    .left-side h1 {
-        font-size: 36px;
+        width: 90vw;
+        height: 90vw;
+        max-width: 520px;
+        max-height: 520px;
     }
 }
