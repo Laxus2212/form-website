@@ -53,11 +53,13 @@ body {
 }
 
 .illustration {
+    width: 520px;
+    height: 520px;
+    position: relative;
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
 }
 
 .photo-card {
