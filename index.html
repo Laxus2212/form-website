@@ -3,47 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Form Test</title>
-
+    <title>Social Login Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <main class="page">
 
-        <h1>Form Test</h1>
+        <section class="intro">
+            <h1>facebook</h1>
+            <p>
+                Terhubung dengan teman dan berbagai hal
+                yang penting bagi kamu.
+            </p>
+        </section>
 
-        <form id="dataForm">
+        <section class="login-card">
 
-            <label for="email">Email</label>
+            <form id="loginForm">
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Masukkan email"
-                required
-            >
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email atau nomor telepon"
+                    required
+                >
 
-            <label for="keterangan">Password</label>
+                <input
+                    type="password"
+                    id="demoPassword"
+                    placeholder="Password demo"
+                    required
+                >
 
-<input
-    type="password"
-    id="keterangan"
-    placeholder="Masukkan keterangan"
-    required
->
+                <button type="submit" class="login-button">
+                    Masuk
+                </button>
 
-            <button type="submit">
-                Login
-            </button>
+                <a href="#" class="forgot">
+                    Lupa password?
+                </a>
 
-        </form>
+                <div class="divider"></div>
 
-        <p id="status"></p>
+                <button type="button" class="create-button">
+                    Buat akun baru
+                </button>
 
-    </div>
+                <p class="demo-notice">
+                    Demo tampilan — password tidak disimpan
+                    atau dikirim ke server.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
 
     <script src="script.js"></script>
 
