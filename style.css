@@ -18,7 +18,7 @@ body {
 
 /* =========================
    LOGO FACEBOOK
-========================= */
+   ========================= */
 
 .top-logo {
     position: absolute;
@@ -32,44 +32,46 @@ body {
 .top-logo img {
     width: 42px;
     height: 42px;
-    object-fit: contain;
     display: block;
+    object-fit: contain;
 }
 
 /* =========================
-   MAIN LAYOUT
-========================= */
+   LAYOUT UTAMA
+   ========================= */
 
 .main {
+    width: 100%;
     min-height: calc(100vh - 105px);
     display: flex;
 }
 
 /* =========================
-   LEFT SIDE
-========================= */
+   BAGIAN KIRI
+   ========================= */
 
 .left-side {
     width: 75%;
-    position: relative;
     min-height: 730px;
-    padding-left: 28px;
-    padding-bottom: 35px;
-
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-left: 28px;
+    padding-bottom: 35px;
+    border-right: 1px solid #ddd;
 }
 
 /* =========================
-   TEXT
-========================= */
+   JUDUL
+   ========================= */
 
 .left-side h1 {
+    margin: 0;
     font-size: 44px;
     line-height: 1.05;
-    margin: 0;
     font-weight: 700;
+    letter-spacing: -1.5px;
 }
 
 .left-side h1 span {
@@ -77,209 +79,66 @@ body {
 }
 
 /* =========================
-   ILLUSTRATION AREA
-========================= */
+   GAMBAR UTAMA
+   ========================= */
+
+/*
+   Gambar gambar1.jpeg / gambar2.jpeg /
+   gambar3.jpeg dipasang lewat JavaScript
+   sebagai background.
+*/
 
 .illustration {
+    position: absolute;
+
     width: 580px;
     height: 580px;
-    position: absolute;
 
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -55%);
+    top: 48px;
+
+    transform: translateX(-50%);
 
     background-color: #fff;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 
     z-index: 2;
 }
 
-/* =========================
-   PHOTO CARDS
-========================= */
+/*
+   Karena gambar1/2/3 sudah merupakan
+   gambar komposit lengkap, elemen dekorasi
+   HTML lama disembunyikan agar tidak
+   bertumpuk dengan gambar utama.
+*/
 
-.photo-card {
-    position: absolute;
-    background: #fff;
-    border-radius: 20px;
-    padding: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+.illustration > .circle,
+.illustration > .photo-card,
+.illustration > .profile-card {
+    display: none !important;
 }
 
-/* Kartu foto belakang */
+/* Elemen lama kalau ada di dalam illustration */
 
-.card-1 {
-    width: 230px;
-    height: 280px;
-    left: 35px;
-    top: 150px;
-    transform: rotate(-5deg);
-    z-index: 2;
-}
-
-/* Kartu foto utama */
-
-.card-2 {
-    width: 270px;
-    height: 470px;
-    right: 40px;
-    top: 0;
-    transform: rotate(2deg);
-    z-index: 3;
+.illustration .photo-card,
+.illustration .profile-card,
+.illustration .circle,
+.illustration .fake-photo,
+.illustration .photo-one,
+.illustration .photo-two {
+    display: none !important;
 }
 
 /* =========================
-   FOTO DI DALAM CARD
-========================= */
-
-.photo-card span {
-    display: block;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.fake-photo {
-    width: 100%;
-    height: calc(100% - 42px);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* =========================
-   FOTO 1
-========================= */
-
-.photo-one {
-    background:
-        linear-gradient(
-            135deg,
-            #365d35,
-            #78945d 45%,
-            #a33b2c
-        );
-}
-
-/* =========================
-   FOTO 2
-========================= */
-
-.photo-two {
-    background:
-        linear-gradient(
-            135deg,
-            #8ec9e8,
-            #3c9ad6 45%,
-            #f0b37e
-        );
-}
-
-/* =========================
-   PROFILE CARD
-========================= */
-
-.profile-card {
-    position: absolute;
-    width: 230px;
-    height: 170px;
-    background: #fff;
-
-    left: 145px;
-    bottom: 20px;
-
-    border-radius: 18px;
-    padding: 20px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-    z-index: 6;
-}
-
-/* =========================
-   AVATAR
-========================= */
-
-.avatar {
-    width: 75px;
-    height: 75px;
-
-    border-radius: 50%;
-    background: #eee;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 40px;
-    margin-bottom: 15px;
-
-    border: 3px solid #1877f2;
-}
-
-/* =========================
-   PROFILE LINES
-========================= */
-
-.profile-line {
-    height: 10px;
-    width: 120px;
-
-    border-radius: 10px;
-    background: #e4e6eb;
-
-    margin-bottom: 8px;
-}
-
-.profile-line-short {
-    width: 75px;
-}
-
-/* =========================
-   DECORATIVE CIRCLES
-========================= */
-
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    z-index: 8;
-}
-
-/* Emoji kuning */
-
-.circle-1 {
-    width: 55px;
-    height: 55px;
-
-    background: #ffcc4d;
-
-    left: 45px;
-    top: 35px;
-}
-
-/* Love */
-
-.circle-2 {
-    width: 65px;
-    height: 65px;
-
-    background: #ff4d78;
-
-    right: 20px;
-    top: 300px;
-}
-
-/* =========================
-   RIGHT SIDE
-========================= */
+   BAGIAN KANAN
+   ========================= */
 
 .right-side {
     width: 25%;
     min-width: 390px;
-
-    border-left: 1px solid #ddd;
+    min-height: 730px;
 
     display: flex;
     align-items: center;
@@ -289,57 +148,70 @@ body {
 }
 
 /* =========================
-   LOGIN AREA
-========================= */
+   FORM LOGIN
+   ========================= */
 
-.login-box {
+.right-side form,
+.right-side .login-form,
+.right-side .login-box {
     width: 100%;
     max-width: 375px;
 }
 
-.login-box h2 {
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0 0 20px;
+/* Judul login */
+
+.right-side h2,
+.right-side h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-/* =========================
-   INPUT
-========================= */
+/* Semua input */
 
-.login-box input {
+.right-side input[type="text"],
+.right-side input[type="email"],
+.right-side input[type="password"],
+.right-side input[type="tel"] {
     width: 100%;
-    height: 42px;
+    height: 48px;
+
+    padding: 0 14px;
 
     border: 1px solid #ccd0d5;
     border-radius: 8px;
 
-    padding: 0 12px;
-    margin-bottom: 10px;
+    background: #fff;
 
-    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
     outline: none;
+
+    margin-bottom: 10px;
 }
 
-.login-box input:focus {
+.right-side input:focus {
     border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.15);
 }
 
 /* =========================
-   LOGIN BUTTON
-========================= */
+   TOMBOL LOGIN
+   ========================= */
 
-.login-box button {
+.right-side button,
+.right-side input[type="submit"] {
     width: 100%;
-    height: 42px;
+    height: 48px;
 
-    border: none;
+    border: 0;
     border-radius: 8px;
 
     background: #1877f2;
     color: white;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
 
     cursor: pointer;
@@ -347,44 +219,51 @@ body {
     margin-top: 2px;
 }
 
-.login-box button:hover {
+.right-side button:hover,
+.right-side input[type="submit"]:hover {
     background: #166fe5;
 }
 
 /* =========================
-   FORGOT PASSWORD
-========================= */
+   LINK
+   ========================= */
 
-.forgot-password {
-    text-align: center;
-    margin: 17px 0;
-
-    font-size: 12px;
-}
-
-.forgot-password a {
-    color: #111;
+.right-side a {
+    color: #1877f2;
     text-decoration: none;
 }
 
-/* =========================
-   DIVIDER
-========================= */
+.right-side a:hover {
+    text-decoration: underline;
+}
 
-.divider {
-    width: 100%;
-    height: 1px;
-    background: #ddd;
+/* Lupa password */
+
+.right-side .forgot-password,
+.right-side .forgot,
+.right-side p {
+    font-size: 13px;
+}
+
+/* =========================
+   PEMBATAS
+   ========================= */
+
+.right-side hr {
+    border: 0;
+    border-top: 1px solid #ddd;
     margin: 20px 0;
 }
 
 /* =========================
-   CREATE ACCOUNT
-========================= */
+   TOMBOL BUAT AKUN
+   ========================= */
 
-.create-account {
+.right-side .create-account,
+.right-side .register,
+.right-side button.secondary {
     width: 100%;
-    height: 42px;
+    height: 46px;
 
     border: 1px solid #1877f2;
     border-radius: 8px;
@@ -392,37 +271,21 @@ body {
     background: #fff;
     color: #1877f2;
 
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
 
     cursor: pointer;
 }
 
-.create-account:hover {
-    background: #f0f7ff;
-}
-
-/* =========================
-   META
-========================= */
-
-.meta-logo {
-    margin-top: 18px;
-    text-align: center;
-
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-}
-
-.meta-logo span {
-    color: #1877f2;
-    font-weight: 700;
+.right-side .create-account:hover,
+.right-side .register:hover,
+.right-side button.secondary:hover {
+    background: #f5f9ff;
 }
 
 /* =========================
    FOOTER
-========================= */
+   ========================= */
 
 footer {
     width: 100%;
@@ -434,33 +297,53 @@ footer {
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    background: #fff;
 }
 
 footer p {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
     color: #737373;
 }
 
 /* =========================
-   RESPONSIVE
-========================= */
+   META
+   ========================= */
 
-@media (max-width: 1100px) {
+.meta-logo {
+    margin-top: 20px;
+    text-align: center;
+
+    color: #1877f2;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.meta-logo span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
 
     .left-side {
-        width: 70%;
+        width: 65%;
     }
 
     .right-side {
-        width: 30%;
+        width: 35%;
         min-width: 340px;
-        padding: 25px;
     }
 
     .illustration {
-        transform: translate(-45%, -55%) scale(.9);
+        width: 500px;
+        height: 500px;
+        top: 60px;
     }
 
     .left-side h1 {
@@ -468,7 +351,7 @@ footer p {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 760px) {
 
     .main {
         flex-direction: column;
@@ -476,51 +359,24 @@ footer p {
 
     .left-side {
         width: 100%;
-        min-height: 650px;
+        min-height: 600px;
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
     }
 
     .right-side {
         width: 100%;
         min-width: 0;
-        border-left: none;
-        border-top: 1px solid #ddd;
-
-        padding: 50px 25px;
+        min-height: 500px;
     }
 
     .illustration {
-        left: 50%;
-        transform: translate(-50%, -50%) scale(.85);
+        width: min(520px, 90vw);
+        height: min(520px, 90vw);
+        top: 50px;
     }
 
     .left-side h1 {
         font-size: 36px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .top-logo {
-        top: 18px;
-        left: 18px;
-    }
-
-    .left-side {
-        min-height: 560px;
-        padding-left: 20px;
-    }
-
-    .illustration {
-        width: 480px;
-        height: 480px;
-        transform: translate(-50%, -50%) scale(.75);
-    }
-
-    .left-side h1 {
-        font-size: 32px;
-    }
-
-    .right-side {
-        padding: 30px 20px;
     }
 }
