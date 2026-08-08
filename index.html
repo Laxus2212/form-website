@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Form Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Form Test</h1>
+
+        <form id="dataForm">
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Masukkan email"
+                required
+            >
+
+            <label for="keterangan">Keterangan</label>
+
+            <textarea
+                id="keterangan"
+                placeholder="Masukkan keterangan"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Kirim Data
+            </button>
+
+        </form>
+
+        <p id="status"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
