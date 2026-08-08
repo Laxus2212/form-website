@@ -2,17 +2,31 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color: #111;
+}
+
+/* =========================
+   LOGO FACEBOOK
+========================= */
+
 .top-logo {
     position: absolute;
-    top: 25px;
+    top: 28px;
     left: 30px;
     width: 42px;
     height: 42px;
+    z-index: 20;
 }
 
 .top-logo img {
@@ -21,22 +35,35 @@ body {
     object-fit: contain;
     display: block;
 }
-    
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
 .main {
     min-height: calc(100vh - 105px);
     display: flex;
 }
+
+/* =========================
+   LEFT SIDE
+========================= */
 
 .left-side {
     width: 75%;
     position: relative;
     min-height: 730px;
     padding-left: 28px;
+    padding-bottom: 35px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 35px;
 }
+
+/* =========================
+   TEXT
+========================= */
 
 .left-side h1 {
     font-size: 44px;
@@ -49,24 +76,41 @@ body {
     color: #1877f2;
 }
 
+/* =========================
+   ILLUSTRATION AREA
+========================= */
+
 .illustration {
     width: 580px;
     height: 580px;
-    position: relative;
-    left: -120px;
-    background-color: white;
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+
+    background-color: #fff;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    z-index: 2;
 }
+
+/* =========================
+   PHOTO CARDS
+========================= */
 
 .photo-card {
     position: absolute;
-    background: white;
+    background: #fff;
     border-radius: 20px;
     padding: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
+
+/* Kartu foto belakang */
 
 .card-1 {
     width: 230px;
@@ -74,7 +118,10 @@ body {
     left: 35px;
     top: 150px;
     transform: rotate(-5deg);
+    z-index: 2;
 }
+
+/* Kartu foto utama */
 
 .card-2 {
     width: 270px;
@@ -82,7 +129,12 @@ body {
     right: 40px;
     top: 0;
     transform: rotate(2deg);
+    z-index: 3;
 }
+
+/* =========================
+   FOTO DI DALAM CARD
+========================= */
 
 .photo-card span {
     display: block;
@@ -94,182 +146,329 @@ body {
     width: 100%;
     height: calc(100% - 42px);
     border-radius: 12px;
+    overflow: hidden;
 }
+
+/* =========================
+   FOTO 1
+========================= */
 
 .photo-one {
-    background: linear-gradient(
-        135deg,
-        #86a65b,
-        #d8bd78,
-        #776447
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #365d35,
+            #78945d 45%,
+            #a33b2c
+        );
 }
 
+/* =========================
+   FOTO 2
+========================= */
+
 .photo-two {
-    background: linear-gradient(
-        145deg,
-        #d98b8b,
-        #e8b59b,
-        #536f8b
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #8ec9e8,
+            #3c9ad6 45%,
+            #f0b37e
+        );
 }
+
+/* =========================
+   PROFILE CARD
+========================= */
 
 .profile-card {
     position: absolute;
     width: 230px;
-    height: 280px;
-    background: white;
+    height: 170px;
+    background: #fff;
+
     left: 145px;
     bottom: 20px;
+
     border-radius: 18px;
     padding: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    z-index: 6;
 }
+
+/* =========================
+   AVATAR
+========================= */
 
 .avatar {
     width: 75px;
     height: 75px;
+
     border-radius: 50%;
     background: #eee;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 40px;
     margin-bottom: 15px;
+
+    border: 3px solid #1877f2;
 }
+
+/* =========================
+   PROFILE LINES
+========================= */
 
 .profile-line {
     height: 10px;
     width: 120px;
+
     border-radius: 10px;
     background: #e4e6eb;
+
     margin-bottom: 8px;
 }
 
-.profile-line.short {
+.profile-line-short {
     width: 75px;
 }
+
+/* =========================
+   DECORATIVE CIRCLES
+========================= */
 
 .circle {
     position: absolute;
     border-radius: 50%;
+    z-index: 8;
 }
+
+/* Emoji kuning */
 
 .circle-1 {
     width: 55px;
     height: 55px;
+
     background: #ffcc4d;
-    left: 25px;
-    top: 70px;
+
+    left: 45px;
+    top: 35px;
 }
+
+/* Love */
 
 .circle-2 {
     width: 65px;
     height: 65px;
+
     background: #ff4d78;
-    right: 0;
-    top: 365px;
+
+    right: 20px;
+    top: 300px;
 }
+
+/* =========================
+   RIGHT SIDE
+========================= */
 
 .right-side {
     width: 25%;
     min-width: 390px;
+
     border-left: 1px solid #ddd;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 40px;
 }
 
-.login-area {
-    width: 375px;
-    padding: 25px;
-}
+/* =========================
+   LOGIN AREA
+========================= */
 
-.login-area h2 {
-    font-size: 15px;
-    margin-bottom: 16px;
-}
-
-.login-area input {
+.login-box {
     width: 100%;
-    height: 44px;
+    max-width: 375px;
+}
+
+.login-box h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.login-box input {
+    width: 100%;
+    height: 42px;
+
     border: 1px solid #ccd0d5;
     border-radius: 8px;
-    padding: 12px;
+
+    padding: 0 12px;
     margin-bottom: 10px;
+
     font-size: 13px;
     outline: none;
 }
 
-.login-area input:focus {
+.login-box input:focus {
     border-color: #1877f2;
 }
 
-.login-btn {
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-box button {
     width: 100%;
-    height: 44px;
-    border: 0;
-    border-radius: 22px;
+    height: 42px;
+
+    border: none;
+    border-radius: 8px;
+
     background: #1877f2;
     color: white;
+
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
+
     cursor: pointer;
+
+    margin-top: 2px;
 }
 
-.forgot {
-    display: block;
+.login-box button:hover {
+    background: #166fe5;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-password {
     text-align: center;
-    margin: 18px 0;
-    color: #111;
-    text-decoration: none;
+    margin: 17px 0;
+
     font-size: 12px;
 }
 
-.line {
+.forgot-password a {
+    color: #111;
+    text-decoration: none;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    width: 100%;
     height: 1px;
     background: #ddd;
     margin: 20px 0;
 }
 
-.create-btn {
+/* =========================
+   CREATE ACCOUNT
+========================= */
+
+.create-account {
     width: 100%;
     height: 42px;
+
     border: 1px solid #1877f2;
-    border-radius: 22px;
-    background: white;
+    border-radius: 8px;
+
+    background: #fff;
     color: #1877f2;
-    font-weight: bold;
+
+    font-size: 13px;
+    font-weight: 600;
+
     cursor: pointer;
 }
 
-.demo-text {
-    text-align: center;
-    font-size: 11px;
-    color: #777;
-    line-height: 1.4;
-    margin-top: 18px;
+.create-account:hover {
+    background: #f0f7ff;
 }
+
+/* =========================
+   META
+========================= */
+
+.meta-logo {
+    margin-top: 18px;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.meta-logo span {
+    color: #1877f2;
+    font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
+    width: 100%;
     min-height: 105px;
-    border-top: 1px solid #ddd;
-    padding: 25px 30%;
-    font-size: 11px;
-    color: #65676b;
-    line-height: 2;
-}
 
-.languages,
-.links {
-    margin-bottom: 5px;
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
 }
 
 footer p {
     margin: 0;
+    font-size: 11px;
+    color: #737373;
 }
 
-@media (max-width: 900px) {
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .left-side {
+        width: 70%;
+    }
+
+    .right-side {
+        width: 30%;
+        min-width: 340px;
+        padding: 25px;
+    }
+
+    .illustration {
+        transform: translate(-45%, -55%) scale(.9);
+    }
+
+    .left-side h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 850px) {
 
     .main {
         flex-direction: column;
@@ -277,36 +476,29 @@ footer p {
 
     .left-side {
         width: 100%;
-        min-height: 600px;
-        padding: 30px 20px;
-        justify-content: flex-end;
+        min-height: 650px;
     }
 
     .right-side {
         width: 100%;
         min-width: 0;
-        border-left: 0;
+        border-left: none;
         border-top: 1px solid #ddd;
-        padding: 30px 15px;
+
+        padding: 50px 25px;
     }
 
     .illustration {
-        transform: translateX(-50%) scale(.75);
-        transform-origin: top center;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.85);
     }
 
     .left-side h1 {
-        font-size: 34px;
-        text-align: center;
-    }
-
-    footer {
-        padding: 25px;
-        text-align: center;
+        font-size: 36px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .top-logo {
         top: 18px;
@@ -314,36 +506,21 @@ footer p {
     }
 
     .left-side {
-        min-height: 480px;
+        min-height: 560px;
+        padding-left: 20px;
     }
 
     .illustration {
-        transform: translateX(-50%) scale(.58);
+        width: 480px;
+        height: 480px;
+        transform: translate(-50%, -50%) scale(.75);
     }
 
     .left-side h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .login-area {
-        width: 100%;
+    .right-side {
+        padding: 30px 20px;
     }
-}
-@media (max-width: 500px) {
-    ...
-    ...
-}  /* tutup media */
-
-
-/* GAMBAR RANDOM */
-.illustration {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.illustration > .circle,
-.illustration > .photo-card,
-.illustration > .profile-card {
-    display: none;
 }
