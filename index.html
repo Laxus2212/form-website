@@ -3,140 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
+    <title>Social Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="top-logo">
-    <img src="./logo.png" alt="Logo">
-</div>
+<header class="top-bar">
+    <div class="demo-logo">S</div>
+</header>
 
-    <main class="main">
+<main class="page">
 
-        <section class="left-side">
+    <section class="left-side">
 
-            <div class="illustration">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
-
-                <div class="photo-card card-1">
-                    <span>☀️</span>
-                    <div class="fake-photo photo-one"></div>
-                </div>
-
-                <div class="photo-card card-2">
-                    <span>❤️</span>
-                    <div class="fake-photo photo-two"></div>
-                </div>
-
-                <div class="profile-card">
-                    <div class="avatar">😊</div>
-                    <div class="profile-line"></div>
-                    <div class="profile-line short"></div>
-                </div>
-
+        <div class="illustration">
+            <div class="photo-card card-1">
+                <img src="gambar1.jpeg" alt="Demo image">
             </div>
 
-            <h1>
-                Jelajahi hal-hal<br>
-                yang <span>Anda sukai.</span>
-            </h1>
-
-        </section>
-
-
-        <section class="right-side">
-
-            <div class="login-area">
-
-                <h2>Masuk ke Facebook</h2>
-
-                <form id="loginForm">
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Email atau nomor ponsel"
-                        required
-                    >
-
-                    <input
-                        type="password"
-                        id="demoPassword"
-                        placeholder="Kata sandi"
-                        required
-                    >
-
-                    <button type="submit" class="login-btn">
-                        Login
-                    </button>
-
-                    <a href="#" class="forgot">
-                        Lupa kata sandi?
-                    </a>
-
-                    <div class="line"></div>
-
-                    <button type="button" class="create-btn">
-                        Buat akun baru
-                    </button>
-
-                    <p class="demo-text">
-                        Ini hanya halaman demo. Data password
-                        tidak disimpan atau dikirim.
-                    </p>
-
-                </form>
-
+            <div class="photo-card card-2">
+                <img src="gambar2.jpeg" alt="Demo image">
             </div>
 
-        </section>
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <img src="gambar3.jpeg" alt="Profile">
+                </div>
 
-    </main>
+                <div class="profile-line"></div>
+                <div class="profile-line profile-line-short"></div>
+            </div>
 
-
-    <footer>
-
-        <div class="languages">
-            Bahasa Indonesia &nbsp;&nbsp;
-            English (US) &nbsp;&nbsp;
-            Français (France) &nbsp;&nbsp;
-            Tiếng Việt &nbsp;&nbsp;
-            中文 &nbsp;&nbsp;
-            Español
+            <div class="emoji emoji-1">😄</div>
+            <div class="emoji emoji-2">❤️</div>
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
         </div>
 
-        <div class="links">
-            Tentang &nbsp; Privasi &nbsp; Ketentuan &nbsp;
-            Bantuan &nbsp; Cookie &nbsp; Pengaturan
+        <h1>
+            Jelajahi hal-hal<br>
+            yang <span>Anda sukai.</span>
+        </h1>
+
+    </section>
+
+
+    <section class="right-side">
+
+        <div class="login-box">
+
+            <h2>Masuk ke Social Demo</h2>
+
+            <form onsubmit="return false;">
+
+                <input
+                    type="text"
+                    placeholder="Email atau nomor ponsel"
+                    autocomplete="off"
+                    disabled
+                >
+
+                <input
+                    type="password"
+                    placeholder="Kata sandi"
+                    autocomplete="off"
+                    disabled
+                >
+
+                <button type="button" class="login-button" disabled>
+                    Login
+                </button>
+
+                <a href="#" onclick="return false;">
+                    Lupa kata sandi?
+                </a>
+
+                <div class="divider"></div>
+
+                <button type="button" class="create-button">
+                    Buat akun baru
+                </button>
+
+                <p class="demo-notice">
+                    Ini hanya halaman demo.<br>
+                    Data password tidak disimpan atau dikirim.
+                </p>
+
+            </form>
+
         </div>
 
-        <p>Meta © 2026</p>
+    </section>
 
-    </footer>
+</main>
 
-    <script src="script.js"></script>
-<script>
-const gambar = [
-    "./gambar1.jpeg",
-    "./gambar2.jpeg",
-    "./gambar3.jpeg"
-];
 
-document.addEventListener("DOMContentLoaded", function () {
-    const illustration = document.querySelector(".illustration");
+<footer>
+    <div class="languages">
+        Bahasa Indonesia
+        <span>English (US)</span>
+        <span>Français (France)</span>
+        <span>Tiếng Việt</span>
+        <span>中文</span>
+        <span>Español</span>
+    </div>
 
-    if (!illustration) return;
+    <div class="footer-links">
+        Tentang
+        <span>Privasi</span>
+        <span>Ketentuan</span>
+        <span>Bantuan</span>
+        <span>Cookie</span>
+        <span>Pengaturan</span>
+    </div>
 
-    const pilihan = Math.floor(Math.random() * gambar.length);
+    <div class="copyright">
+        Social Demo © 2026
+    </div>
+</footer>
 
-    illustration.style.backgroundImage = `url("${gambar[pilihan]}")`;
-    illustration.style.backgroundSize = "contain";
-    illustration.style.backgroundRepeat = "no-repeat";
-    illustration.style.backgroundPosition = "center";
-});
-</script>
 </body>
 </html>
