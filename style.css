@@ -53,6 +53,7 @@ body {
     width: 580px;
     height: 580px;
     position: relative;
+    left: -120px;
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
