@@ -3,125 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Social Demo</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="top-bar">
-    <div class="demo-logo">S</div>
-</header>
+    <!-- LOGO -->
+    <div class="top-logo">
+        S
+    </div>
 
-<main class="page">
 
-    <section class="left-side">
+    <!-- MAIN -->
+    <main class="main-container">
 
-        <div class="illustration">
-            <div class="photo-card card-1">
-                <img src="gambar1.jpeg" alt="Demo image">
-            </div>
+        <!-- LEFT -->
+        <section class="left-side">
 
-            <div class="photo-card card-2">
-                <img src="gambar2.jpeg" alt="Demo image">
-            </div>
+            <div class="illustration">
 
-            <div class="profile-card">
-                <div class="profile-avatar">
-                    <img src="gambar3.jpeg" alt="Profile">
+                <!-- FOTO 1 -->
+                <div class="photo-card card-1">
+                    <img id="photo1" src="gambar1.jpeg" alt="Foto">
                 </div>
 
-                <div class="profile-line"></div>
-                <div class="profile-line profile-line-short"></div>
+                <!-- FOTO 2 -->
+                <div class="photo-card card-2">
+                    <img id="photo2" src="gambar2.jpeg" alt="Foto">
+                </div>
+
+                <!-- PROFILE CARD -->
+                <div class="profile-card">
+
+                    <div class="avatar">
+                        <img id="photo3" src="gambar3.jpeg" alt="Profile">
+                    </div>
+
+                    <div class="profile-line"></div>
+
+                    <div class="profile-line profile-line-short"></div>
+
+                </div>
+
+                <!-- DECORATION -->
+                <div class="emoji emoji-smile">
+                    😄
+                </div>
+
+                <div class="emoji emoji-heart">
+                    ❤️
+                </div>
+
+                <div class="circle circle-yellow"></div>
+                <div class="circle circle-pink"></div>
+
             </div>
 
-            <div class="emoji emoji-1">😄</div>
-            <div class="emoji emoji-2">❤️</div>
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
+
+            <!-- TITLE -->
+            <h1>
+                Jelajahi hal-hal<br>
+                yang <span>Anda sukai.</span>
+            </h1>
+
+        </section>
+
+
+        <!-- RIGHT -->
+        <section class="right-side">
+
+            <div class="login-box">
+
+                <h2>
+                    Masuk ke Social Demo
+                </h2>
+
+
+                <form onsubmit="return false;">
+
+                    <input
+                        type="text"
+                        placeholder="Email atau nomor ponsel"
+                        autocomplete="off"
+                        disabled
+                    >
+
+                    <input
+                        type="password"
+                        placeholder="Kata sandi"
+                        autocomplete="off"
+                        disabled
+                    >
+
+
+                    <button
+                        type="button"
+                        class="login-button"
+                        disabled
+                    >
+                        Login
+                    </button>
+
+
+                    <a
+                        href="#"
+                        onclick="return false;"
+                        class="forgot-password"
+                    >
+                        Lupa kata sandi?
+                    </a>
+
+
+                    <div class="divider"></div>
+
+
+                    <button
+                        type="button"
+                        class="create-button"
+                    >
+                        Buat akun baru
+                    </button>
+
+
+                    <p class="demo-text">
+                        Ini hanya halaman demo.<br>
+                        Data password tidak disimpan atau dikirim.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-languages">
+            <span>Bahasa Indonesia</span>
+            <span>English (US)</span>
+            <span>Français (France)</span>
+            <span>Tiếng Việt</span>
+            <span>中文</span>
+            <span>Español</span>
         </div>
 
-        <h1>
-            Jelajahi hal-hal<br>
-            yang <span>Anda sukai.</span>
-        </h1>
 
-    </section>
-
-
-    <section class="right-side">
-
-        <div class="login-box">
-
-            <h2>Masuk ke Social Demo</h2>
-
-            <form onsubmit="return false;">
-
-                <input
-                    type="text"
-                    placeholder="Email atau nomor ponsel"
-                    autocomplete="off"
-                    disabled
-                >
-
-                <input
-                    type="password"
-                    placeholder="Kata sandi"
-                    autocomplete="off"
-                    disabled
-                >
-
-                <button type="button" class="login-button" disabled>
-                    Login
-                </button>
-
-                <a href="#" onclick="return false;">
-                    Lupa kata sandi?
-                </a>
-
-                <div class="divider"></div>
-
-                <button type="button" class="create-button">
-                    Buat akun baru
-                </button>
-
-                <p class="demo-notice">
-                    Ini hanya halaman demo.<br>
-                    Data password tidak disimpan atau dikirim.
-                </p>
-
-            </form>
-
+        <div class="footer-links">
+            <span>Tentang</span>
+            <span>Privasi</span>
+            <span>Ketentuan</span>
+            <span>Bantuan</span>
+            <span>Cookie</span>
+            <span>Pengaturan</span>
         </div>
 
-    </section>
 
-</main>
+        <div class="copyright">
+            Social Demo © 2026
+        </div>
+
+    </footer>
 
 
-<footer>
-    <div class="languages">
-        Bahasa Indonesia
-        <span>English (US)</span>
-        <span>Français (France)</span>
-        <span>Tiếng Việt</span>
-        <span>中文</span>
-        <span>Español</span>
-    </div>
-
-    <div class="footer-links">
-        Tentang
-        <span>Privasi</span>
-        <span>Ketentuan</span>
-        <span>Bantuan</span>
-        <span>Cookie</span>
-        <span>Pengaturan</span>
-    </div>
-
-    <div class="copyright">
-        Social Demo © 2026
-    </div>
-</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
