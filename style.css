@@ -12,102 +12,278 @@ body {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
-    color: #1c1e21;
+    background: #ffffff;
+    color: #111111;
 }
 
-/* =========================
-   LOGO
-   ========================= */
 
-.top-logo {
+/* =========================
+   TOP LOGO
+========================= */
+
+.top-bar {
     position: absolute;
-    top: 28px;
-    left: 30px;
-    width: 42px;
-    height: 42px;
+    top: 0;
+    left: 0;
+    padding: 22px 28px;
     z-index: 10;
 }
 
-.top-logo img {
-    display: block;
+.demo-logo {
     width: 42px;
     height: 42px;
-    object-fit: contain;
+    border-radius: 50%;
+    background: #1877f2;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    font-weight: 700;
 }
 
-/* =========================
-   MAIN
-   ========================= */
 
-.main {
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.page {
+    min-height: calc(100vh - 110px);
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 105px);
 }
 
+
 /* =========================
-   LEFT
-   ========================= */
+   LEFT SIDE
+========================= */
 
 .left-side {
-    position: relative;
     width: 75%;
     min-height: 730px;
 
+    position: relative;
+
     padding-left: 28px;
-    padding-bottom: 35px;
+    padding-top: 28px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
-    border-right: 1px solid #ddd;
+    padding-bottom: 38px;
 }
 
+
 /* =========================
-   MAIN ILLUSTRATION
-   ========================= */
+   ILLUSTRATION
+========================= */
 
 .illustration {
+    width: 520px;
+    height: 520px;
+
     position: absolute;
 
-    width: 580px;
-    height: 580px;
-
     left: 50%;
-    top: 45px;
+    top: 50%;
 
-    transform: translateX(-50%);
+    transform: translate(-50%, -53%);
 
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: #f7f7f7;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   PHOTO CARDS
+========================= */
+
+.photo-card {
+    position: absolute;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* belakang */
+
+.card-1 {
+    width: 230px;
+    height: 280px;
+
+    left: 55px;
+    top: 170px;
+
+    transform: rotate(-5deg);
+
+    z-index: 1;
+}
+
+
+/* depan */
+
+.card-2 {
+    width: 270px;
+    height: 390px;
+
+    right: 40px;
+    top: 20px;
+
+    transform: rotate(2deg);
 
     z-index: 2;
 }
 
-/* gambar1/2/3 sudah merupakan gambar komposit */
-.illustration > .circle,
-.illustration > .photo-card,
-.illustration > .profile-card {
-    display: none !important;
-}
 
 /* =========================
-   TITLE
-   ========================= */
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    position: absolute;
+
+    width: 230px;
+    height: 170px;
+
+    left: 145px;
+    bottom: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    z-index: 5;
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 3px solid #1877f2;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.profile-line {
+    height: 10px;
+    width: 120px;
+
+    border-radius: 10px;
+
+    background: #e4e6eb;
+
+    margin-bottom: 8px;
+}
+
+.profile-line-short {
+    width: 75px;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.emoji {
+    position: absolute;
+
+    z-index: 8;
+
+    font-size: 48px;
+}
+
+.emoji-1 {
+    left: 10px;
+    top: 65px;
+}
+
+.emoji-2 {
+    right: 5px;
+    top: 330px;
+    font-size: 58px;
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    z-index: 0;
+}
+
+.circle-1 {
+    width: 55px;
+    height: 55px;
+
+    left: 25px;
+    top: 70px;
+
+    background: #ffcc4d;
+}
+
+.circle-2 {
+    width: 65px;
+    height: 65px;
+
+    right: 0;
+    top: 365px;
+
+    background: #ff4d78;
+}
+
+
+/* =========================
+   LEFT TITLE
+========================= */
 
 .left-side h1 {
     position: relative;
-    z-index: 5;
+    z-index: 10;
 
     margin: 0;
 
     font-size: 44px;
+
     line-height: 1.05;
-    letter-spacing: -1.5px;
+
     font-weight: 700;
 }
 
@@ -115,237 +291,225 @@ body {
     color: #1877f2;
 }
 
+
 /* =========================
-   RIGHT LOGIN AREA
-   ========================= */
+   RIGHT SIDE
+========================= */
 
 .right-side {
     width: 25%;
+
     min-width: 390px;
+
     min-height: 730px;
 
+    border-left: 1px solid #ddd;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    padding: 40px;
+    padding: 30px;
 }
 
-/* container login */
-.right-side form,
-.right-side .login-form,
-.right-side .login-box {
-    width: 100%;
-    max-width: 375px;
-}
 
 /* =========================
-   LOGIN TITLE
-   ========================= */
+   LOGIN BOX
+========================= */
 
-.right-side h2,
-.right-side h3 {
-    margin: 0 0 18px;
+.login-box {
+    width: 100%;
+    max-width: 390px;
+
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 0 0 22px;
 
     font-size: 20px;
-    line-height: 1.2;
+
     font-weight: 700;
+
+    text-align: left;
 }
 
+
 /* =========================
-   INPUT
-   ========================= */
+   FORM
+========================= */
 
-.right-side input[type="text"],
-.right-side input[type="email"],
-.right-side input[type="password"],
-.right-side input[type="tel"] {
-    display: block;
-
+.login-box form {
     width: 100%;
-    height: 44px;
+}
+
+.login-box input {
+    width: 100%;
+
+    height: 52px;
+
+    margin-bottom: 10px;
 
     padding: 0 14px;
 
-    margin: 0 0 10px;
-
     border: 1px solid #ccd0d5;
+
     border-radius: 8px;
 
-    background: #fff;
+    background: white;
 
-    color: #1c1e21;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 
     outline: none;
 }
 
-.right-side input:focus {
-    border-color: #1877f2;
-    box-shadow: 0 0 0 1px #1877f2;
+.login-box input:disabled {
+    opacity: 1;
+    color: #666;
+    background: white;
 }
 
+
 /* =========================
-   PRIMARY BUTTON
-   ========================= */
+   LOGIN BUTTON
+========================= */
 
-.right-side button[type="submit"],
-.right-side input[type="submit"] {
-    display: block;
-
+.login-button {
     width: 100%;
-    height: 44px;
 
-    margin: 2px 0 0;
+    height: 52px;
+
+    margin-top: 2px;
 
     border: none;
+
     border-radius: 8px;
 
     background: #1877f2;
-    color: #fff;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    color: white;
+
+    font-size: 16px;
+
     font-weight: 700;
 
-    cursor: pointer;
+    cursor: default;
 }
 
-.right-side button[type="submit"]:hover,
-.right-side input[type="submit"]:hover {
-    background: #166fe5;
-}
 
 /* =========================
-   FORGOT PASSWORD
-   ========================= */
+   FORGOT
+========================= */
 
-.right-side .forgot-password {
-    display: block;
+.login-box a {
+    display: inline-block;
 
-    margin: 15px 0 18px;
+    margin-top: 16px;
 
-    text-align: center;
-
-    font-size: 13px;
-}
-
-.right-side .forgot-password a {
-    color: #1877f2;
-    text-decoration: none;
-}
-
-.right-side .forgot-password a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   SEPARATOR
-   ========================= */
-
-.right-side hr {
-    width: 100%;
-
-    margin: 0 0 20px;
-
-    border: 0;
-    border-top: 1px solid #dadde1;
-}
-
-/* =========================
-   CREATE ACCOUNT
-   ========================= */
-
-.right-side .create-account,
-.right-side .register {
-    display: block;
-
-    width: 100%;
-    height: 44px;
-
-    border: 1px solid #1877f2;
-    border-radius: 8px;
-
-    background: #fff;
     color: #1877f2;
 
     font-size: 14px;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    width: 100%;
+
+    height: 1px;
+
+    background: #ddd;
+
+    margin: 20px 0;
+}
+
+
+/* =========================
+   CREATE BUTTON
+========================= */
+
+.create-button {
+    height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 8px;
+
+    border: 1px solid #1877f2;
+
+    background: white;
+
+    color: #1877f2;
+
+    font-size: 15px;
+
     font-weight: 700;
 
     cursor: pointer;
 }
 
-.right-side .create-account:hover,
-.right-side .register:hover {
-    background: #f5f9ff;
-}
 
 /* =========================
    DEMO NOTICE
-   ========================= */
+========================= */
 
 .demo-notice {
-    margin-top: 16px;
-
-    text-align: center;
-
-    color: #65676b;
-
-    font-size: 12px;
-    line-height: 1.35;
-}
-
-/* =========================
-   META / BRANDING DEMO
-   ========================= */
-
-.meta-logo {
     margin-top: 18px;
 
-    text-align: center;
+    color: #555;
 
-    color: #65676b;
-    font-size: 13px;
+    font-size: 12px;
+
+    line-height: 1.4;
 }
 
-.meta-logo span {
-    color: #1877f2;
-    font-size: 17px;
-    font-weight: 700;
-}
 
 /* =========================
    FOOTER
-   ========================= */
+========================= */
 
 footer {
-    width: 100%;
-    min-height: 105px;
-
-    padding: 22px 20px;
+    min-height: 110px;
 
     border-top: 1px solid #ddd;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 22px 30px;
 
-    background: #fff;
-}
-
-footer p {
-    margin: 0;
-
-    color: #737373;
+    color: #65676b;
 
     font-size: 12px;
+
     text-align: center;
 }
 
+.languages {
+    margin-bottom: 12px;
+}
+
+.languages span,
+.footer-links span {
+    margin-left: 14px;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+}
+
+.copyright {
+    color: #777;
+}
+
+
 /* =========================
    RESPONSIVE
-   ========================= */
+========================= */
 
 @media (max-width: 1000px) {
 
@@ -359,8 +523,7 @@ footer p {
     }
 
     .illustration {
-        width: 500px;
-        height: 500px;
+        transform: translate(-50%, -53%) scale(0.85);
     }
 
     .left-side h1 {
@@ -368,29 +531,36 @@ footer p {
     }
 }
 
-@media (max-width: 760px) {
 
-    .main {
+@media (max-width: 750px) {
+
+    .page {
         flex-direction: column;
     }
 
     .left-side {
         width: 100%;
-        min-height: 600px;
-        border-right: 0;
-        border-bottom: 1px solid #ddd;
+        min-height: 650px;
     }
 
     .right-side {
         width: 100%;
         min-width: 0;
-        min-height: 500px;
+
+        border-left: none;
+        border-top: 1px solid #ddd;
+
+        padding: 40px 25px;
     }
 
     .illustration {
-        width: 90vw;
-        height: 90vw;
-        max-width: 520px;
-        max-height: 520px;
+        left: 50%;
+        top: 45%;
+
+        transform: translate(-50%, -50%) scale(0.75);
+    }
+
+    .left-side h1 {
+        font-size: 34px;
     }
 }
